@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3.6]폼 구성하기2</title>
+</head>
+<body>
+    <!-- textarea 태그 -->
+
+    <!-- 여러줄을 입력하는 태그이다. -->
+    
+    <form action="">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <!-- cols와 rows란 속성은 사용하지 않고 css에서 처리하기 때문이다. -->
+
+    <!-- 예시-->
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>블로그 글쓰기</legend>
+            <p>
+                <label for="title">제목
+                    <input type="text" id="title" name="title">
+                </label>
+            </p>
+            <p>
+                <label for="desc">내용
+                    <textarea id="desc" name="desc"></textarea>
+                </label>
+            </p>
+        </fieldset>
+    </form>
+
+
+    ------------------------------------------------------------<br>
+
+
+    <!-- select 태그 -->
+
+    <!-- select 태그만 사용하면 의미가 없기에, option 태그, optgroup 태그와 같이 사용한다. -->
+    <!-- select는 size 속성, multiple 속성과도 같이 사용할 수 있다. -->
+
+    <select name="" id="">
+        <optgroup label="그룹 이름">
+            <option value="서버에 전솔할 값">웹 브라우저에 표시할 값</option>
+        </optgroup>
+    </select>
+    <br>
+
+    <!-- 예제 -->
+
+    <select name="city" id="city">
+        <optgroup label="서울시">
+            <option value="강복구">강복구</option>
+            <option value="강남구">강남구</option>
+            <option value="서초구">서초구</option>
+        </optgroup>
+        <optgroup label="경기도 성남시">
+            <option value="중원구">중원구</option>
+            <option value="분당구">분당구</option>
+        </optgroup>
+    </select>
+    <br>
+
+    <!-- size 속성은 화면에 노출되는 항목 개수를 지정하는 속성이다. -->
+
+    <select name="city" id="city" size="3">
+        <optgroup label="서울시">
+            <option value="강복구">강복구</option>
+            <option value="강남구">강남구</option>
+            <option value="서초구">서초구</option>
+        </optgroup>
+        <optgroup label="경기도 성남시">
+            <option value="중원구">중원구</option>
+            <option value="분당구">분당구</option>
+        </optgroup>
+    </select>
+    <br>
+
+    <!-- multiple 속성은 여러 항목을 동시에 선택하며 ctrl을 누른채 사용한다. -->
+
+    <select name="city" id="city" multiple>
+        <optgroup label="서울시">
+            <option value="강복구">강복구</option>
+            <option value="강남구">강남구</option>
+            <option value="서초구">서초구</option>
+        </optgroup>
+        <optgroup label="경기도 성남시">
+            <option value="중원구">중원구</option>
+            <option value="분당구">분당구</option>
+        </optgroup>
+    </select>
+    <br>
+
+    <!-- selected 속성은 기본 선택 항목을 변경하는 속성이다. -->
+
+    <select name="city" id="city">
+        <optgroup label="서울시">
+            <option value="강복구">강복구</option>
+            <option value="강남구" selected>강남구</option>
+            <option value="서초구">서초구</option>
+        </optgroup>
+        <optgroup label="경기도 성남시">
+            <option value="중원구">중원구</option>
+            <option value="분당구">분당구</option>
+        </optgroup>
+    </select>
+    <br>
+
+
+    ------------------------------------------------------------<br>
+
+
+    <!-- button 태그 -->
+
+    <!-- input 태그의 type 속성값을 submit, reset, button으로 지정할 수 있지만, button 태그로 만들 수 있다. -->
+
+    <button type="종류">버튼 내용</button>
+    <br>
+
+    <!-- 예제 -->
+
+    <button type="submit">
+        <img src="../04. Study Source/chapter 3.6-1.png" alt="페이스북 버튼">
+        페이스북에 등록하기
+    </button>
+
+
+    ------------------------------------------------------------<br>
+
+
+    <!-- 폼 관련된 요소에서 사용되는 공통속성 -->
+
+
+    <!-- disabled 속성 -->
+
+    <!-- 입력요소를 비활성화 시키는 속성이다. -->
+
+    <태그 disabled>
+    <br>
+
+    <!-- 예제 -->
+
+    <input type="text" disabled>
+    <br>
+    <button type="button" disabled>비활성</button>
+    <br>
+
+
+    <!-- readonly 속성 -->
+
+    <!-- 상호작용 요소를 읽기 전용으로 변경하는 속성이다. -->
+
+    <태그 readonly>
+    <br>
+
+    <!-- 예제 -->
+
+    <input type="password" readonly>
+    <br>
+    <textarea readonly></textarea>
+    <br>
+
+
+    <!-- maxlength 속성 -->
+
+    <!-- 입력할 수 있는 글자 수를 제한하는 속성이다. -->
+
+    <태그 maxlength="숫자">
+    <br>
+
+    <!-- 예제 -->
+
+    <input type="text" maxlength="4">
+    <br>
+    <textarea maxlength="4">4글자만</textarea>
+    <br>
+
+
+    <!-- checked 속성 -->
+
+    <!-- 선택이 된 상태로 표현되는 속성이다. -->
+
+    <태그 checked>
+    <br>
+
+    <!-- 예제 -->
+
+    <fieldset>
+        <legend>좋아하는 과일</legend>
+        <input type="checkbox" id="banana" name="banana" value="banana">
+        <label for="banana">banana</label><br>
+        <input type="checkbox" id="apple" name="apple" value="apple">
+        <label for="apple">apple</label><br>
+        <input type="checkbox" id="orange" name="orange" value="orange" checked>
+        <label for="orange">orange</label><br>
+    </fieldset>
+
+
+    <!-- placeholder 속성 -->
+
+    <!-- 사용자에게 어떤값을 입력하면 되는지 간접적으로 보여주는 속성이다.-->
+
+    <input placeholder="입력값에 대한 힌트">
+    <br>
+
+    <!-- 예제 -->
+
+    <input type="tel" placeholder="전화번호를 입력해 주세요.">
+</body>
+</html>
