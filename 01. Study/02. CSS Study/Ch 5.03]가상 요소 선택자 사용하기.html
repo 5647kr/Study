@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5.03]가상 요소 선택자 사용하기</title>
+    <style>
+        h1::before {
+            content: '<before>';
+        }
+
+        h2::after {
+            content: '<after>';
+        }
+
+        p::before {
+            content: '<before>';
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 존재하는 것 처럼 취급해 선택하는 선택자 지정 방법을 가상 요소 선택자라 한다. -->
+
+    <!-- content속성은 html요소의 컨텐츠를 추가하는 요소인데 after와 before요소와 가장 많이 사용된다. -->
+    <!-- 다양하게 있지만, before와 after를 자주 사용한다. -->
+
+    <!-- ::before, ::after -->
+
+    <!-- 예시 -->
+
+    <h1>h1 태그</h1>
+    <h2>h2 태그</h2>
+    
+    <p>p 태그</p>
+</body>
+</html>
