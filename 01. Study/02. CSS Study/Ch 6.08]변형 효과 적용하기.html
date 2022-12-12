@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6.08]변형 효과 적용하기</title>
+    <style>
+        .box1 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: translateX(10px);
+        }
+
+        .box2 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: translateY(10px);
+        }
+
+        .box3 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: translate(20px, 20px);
+        }
+
+        .box4 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: scaleX(2);
+        }
+
+        .box5 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: scaleY(2);
+        }
+
+        .box6 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: scale(2, 2);
+        }
+
+        .box7 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: skewX(10deg);
+        }
+
+        .box8 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: skewY(10deg);
+        }
+
+        .box9 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: skew(20deg, 20deg);
+        }
+
+        .box10 {
+            margin: 50px;
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            transform: rotateX(20deg);
+        }
+
+
+        .box11 {
+            margin: 50px;
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            transform: rotateY(20deg);
+        }
+
+        .box12 {
+            margin: 50px;
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(20deg);
+        }
+
+        .box13 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box13:hover {
+            transform: rotate(30deg);
+            transform-origin: top left;
+        }
+
+        .box14 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 2D 변형뿐 아니라 3D 변형도 가능하지만, 실무에서의 사용이 많지 않기에 2D 위주로 학습한다. -->
+
+    <!-- transform 속성 -->
+
+    <!-- 요소에 변형효과를 지정할 떄 사용한다. -->
+    <!-- 속성값으론 x,y는 2D / z는 3D에 사용한다. -->
+    <!-- translateX,  -->
+
+    <!-- translateX: X축 방향으로 이동할 때 사용한다. -->
+    <!-- translateY: Y축 방향으로 이동할 떄 사용한다. -->
+    <!-- translate(X, Y): X축 Y축 방향으로 이동할 떄 사용한다. -->
+    <!-- scaleX: X축으로 확대 또는 축소할 때 사용한다. -->
+    <!-- scaleY: Y축으로 확대 또는 축소할 때 사용한다.-->
+    <!-- scale(X, Y): X축 Y축으로 확대 또는 축소할 때 사용한다.-->
+    <!-- skewX(deg): X축으로 몇도 기울인다. -->
+    <!-- skewY(deg): Y축으로 몇도 기울인다. -->
+    <!-- skew(deg): X축 Y축으로 몇도 기울인다. -->
+    <!-- rotateX(deg): X축으로 몇도 회전한다. -->
+    <!-- rotateY(deg): Y축으로 몇도 회전한다. -->
+    <!-- rotate(deg): 양수는 오른쪽, 음수는 왼쪽으로 몇도 회전한다. -->
+
+    <div class="box1">translateX</div>
+    <br>
+    <div class="box2">translateY</div>
+    <br>
+    <div class="box3">translate(x,y)</div>
+    <br>
+    <div class="box4">scaleX</div>
+    <br>
+    <div class="box5">scaleY</div>
+    <br>
+    <div class="box6">scale(x,y)</div>
+    <br>
+    <div class="box7">skewX</div>
+    <br>
+    <div class="box8">skewY</div>
+    <br>
+    <div class="box9">skew(x,y)</div>
+    <br>
+    <div class="box10">rotateX</div>
+    <br>
+    <div class="box11">rotateY</div>
+    <br>
+    <div class="box12">rotate</div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- 변환을 하다보면 중심축이 중앙에 있는걸 볼 수 있다. 이 중심축을 변경할 떄 사용하는것이 transform-origin을 사용한다. -->
+
+    <!--  transform-origin -->
+
+    <!-- 속성값으론 요소의 위치지점을 작성하면 된다. -->
+
+    <!-- 예제 -->
+
+    <div class="box13">transform-origin</div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+    <!-- 요소를 정중앙에 배치하는 방법으로도 사용이 가능하다. -->
+
+    <div class="box14">center</div>
+
+    <!-- position값을 absolute로 한뒤 left top을 각각 50%하게 되면, 정중앙으로 와야할것 같지만, 왼쪽 상단 모소리가 정중앙에 오게 된다. -->
+    <!-- 이때, transform으로 정중앙으로 배치할 수 있게 된다. -->
+</body>
+</html>

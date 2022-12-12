@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6.02]텍스트 속성으로 텍스트 꾸미기</title>
+    <style>
+        h1 {
+            font-family: dotum, 바탕, "times new roman", serif;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        h3 {
+            font-weight: normal;
+        }
+
+        .h4_1>h4 {
+            font-size: 32px;
+            font-variant: small-caps;
+        }
+
+        h4 {
+            font-size: 32px;
+        }
+
+        h5 {
+            color: red;
+        }
+
+        h6 {
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .p1>p {
+            letter-spacing: 6px;
+        }
+
+        .p2>p {
+            line-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- font-family 속성 -->
+
+    <!-- 텍스트의 글꼴을 지정할 때 사용한다. -->
+    <!-- 글꼴이 사용자의 컴퓨터에서 지원하는 폰트여야지만 적용된다. -->
+    <!-- 따라서 기본적으로 지원하는 글꼴을 사용한다. -->
+
+    <!-- 예제 -->
+
+    <h1>h1 태그</h1>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- font-size 속성 -->
+
+    <!-- 텍스트의 크기를 지정할 때 사용한다. -->
+    <!-- 주로 rem, em, px 단위를 자주 사용한다. -->
+
+    <!-- 예제 -->
+
+    <h2>h2 태그</h2>
+    
+    
+    <!-- ------------------------------------------------------------ --><br>   <!-- font-weight 속성 -->
+
+    <!-- 텍스트의 굵기를 지정할 때 사용한다. -->
+    <!-- 100~ 900, bold, bolder, lighter,normal 등이 있다. -->
+    <!-- 100~ 900: 100에 가까울수록 얇고 900에 가까울 수록 두껍다. -->
+    <!-- normal: 400과 동일한 값이다. -->
+    <!-- bold: 700과 동일한 값이다. -->
+    <!-- 굵기를 지정하지 않는 폰트를 사용할 경우 굵기가 적용되진 않는다. -->
+
+    <!-- 예제 -->
+
+    <h3>h3 태그</h3>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- font-variant 속성 -->
+
+    <!-- 영문 텍스트에 적용되어 크기가 작은 대문자를 지정할 때 사용한다. -->
+
+    <!-- 예제 -->
+
+    <div class="h4_1">
+        <h4>h4 태그1</h4>
+    </div>
+    <h4>h4 태그2</h4>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- color 속성 -->
+
+    <!-- 텍스트의 색상을 지정할 때 사용한다. -->
+    <!-- 키워드 방법, 16진수 방법, rgb(a) 방법으로 사용한다. -->
+
+    <!-- 예제 -->
+
+    <h5>h5 태그</h5>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- text-align 속성 -->
+
+    <!-- 텍스트의 정렬을 지정할 때 사용한다. -->
+    <!-- left, right, center, justify등이 있다. -->
+    <!-- justify 속성은 양쪽 정렬이다. 단점으론 텍스트와 텍스트 사이가 벌어진다. -->
+
+    <!-- 예제 -->
+
+    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, error aliquid? Aut culpa nihil dignissimos, 
+        officiis voluptas nulla qui sit fugiat tempore ea saepe quos tempora vel iste consequuntur totam?</h6>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- text-decoration 속성 -->
+
+    <!-- 텍스트를 꾸밀 때 사용한다. -->
+    <!-- none, line-through, overline, underline등이 있다. -->
+
+    <!-- 예제 -->
+
+    <a href="#">a 태그</a>
+    <br>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- letter-spacing 속성 -->
+
+    <!-- 텍스트의 자간을 지정할 떄 사용한다. -->
+    <!-- 속성값으론 자간의 크기를 작성한다. -->
+
+    <!-- 예제 -->
+    <div class="p1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, quibusdam in et nam, 
+            ut minus enim fugit voluptatibus provident obcaecati molestiae hic accusantium! Explicabo, 
+            doloremque aperiam quidem delectus inventore mollitia.</p>
+    </div>
+    
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- line-height 속성 -->
+
+    <!-- 텍스트의 행간을 지정할 때 사용한다. -->
+    <!-- 속성값으론 normal, 숫자, 퍼센트, 크기등을 작성한다. -->
+
+    <!-- 예제 -->
+
+    <div class="p2">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio soluta magni explicabo, 
+            omnis necessitatibus vel ratione ab ducimus voluptas quas, 
+            harum distinctio ipsum nostrum? Laborum vero itaque eos minima aliquam.</p>
+    </div>
+</body>
+</html>

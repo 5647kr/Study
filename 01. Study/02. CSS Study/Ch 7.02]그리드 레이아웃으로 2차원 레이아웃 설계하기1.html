@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7.02]그리드 레이아웃으로 2차원 레이아웃 설계하기1</title>
+    <style>
+        .container1 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 50px 100px; /*fr라는 단위도 사용할 수 있다. 균등하게 나누는걸 의미한다. */
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: orange;
+        }
+        .box3 {
+            background-color: yellow;
+        }
+        .box4 {
+            background-color: green;
+        }
+
+
+        .container2 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 50px 100px;
+            grid-template-rows: 1fr 2fr;
+        }
+        .box5 {
+            background-color: red;
+        }
+        .box6 {
+            background-color: orange;
+        }
+        .box7 {
+            background-color: yellow;
+        }
+        .box8 {
+            background-color: green;
+        }
+
+
+        .container3 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 100px 200px;
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .box9 {
+            background-color: red;
+        }
+        .box10 {
+            background-color: orange;
+        }
+        .box11 {
+            background-color: yellow;
+        }
+        .box12 {
+            background-color: green;
+        }
+
+
+        .container4 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            height: 400px;
+            display: grid;
+            grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+            grid-template-rows: repeat(2, minmax(100px, 1fr));
+        }
+        .box13 {
+            background-color: red;
+        }
+        .box14 {
+            background-color: orange;
+        }
+        .box15 {
+            background-color: yellow;
+        }
+        .box16 {
+            background-color: green;
+        }
+
+
+        .container5 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 10px;
+            column-gap: 10px;
+
+        }
+        .box17 {
+            background-color: red;
+        }
+        .box18 {
+            background-color: orange;
+        }
+        .box19 {
+            background-color: yellow;
+        }
+        .box20 {
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- flex-box와 비슷하게 2차원 방식으로 레이아웃을 설계하는 스타일 속성이다. -->
+    <!-- 2차원 방식이란 가로세로를 같이 사용하는 방식이다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+    <!-- grid-template-columns 속성 -->
+
+    <!-- grid의 열을 지정할 때 사용한다. -->
+
+    <div class="container1">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- grid-template-rows 속성 -->
+
+    <!-- grid의 행을 지정할 때 사용한다. -->
+
+    <div class="container2">
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+        <div class="box7">box7</div>
+        <div class="box8">box8</div>
+    </div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- repeat 속성 -->
+
+    <!-- 값이 반복될 경우 repeat를 사용한다. repeat(2, 1fr)= 1fr을 2번 반복한다. -->
+
+
+    <div class="container3">
+        <div class="box9">box9</div>
+        <div class="box10">box10</div>
+        <div class="box11">box11</div>
+        <div class="box12">box12</div>
+    </div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- minmax 속성 -->
+
+    <!-- container가 작아지면 box의 컨텐츠에 영향이 없을경우 작아지는데, 이 작아지는것도 제한할 때 사용한다. -->
+
+    <div class="container4">
+        <div class="box13">box13</div>
+        <div class="box14">box14</div>
+        <div class="box15">box15</div>
+        <div class="box16">box16</div>
+    </div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- row-gap,column-gap 속성 -->
+
+    <!-- row-gap: 그리드의 행 간격을 생성할 때 사용한다. -->
+    <!-- column-gap: 그리드의 열 간격을 생성할 때 사용한다. -->
+    <div class="container5">
+        <div class="box17">box17</div>
+        <div class="box18">box18</div>
+        <div class="box19">box19</div>
+        <div class="box20">box20</div>
+    </div>
+</body>
+</html>

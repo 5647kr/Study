@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7.01]플렉스 박스 레이아웃으로 1차원 레이아웃 설계하기</title>
+    <style>
+        .container1 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: orange;
+        }
+        .box3 {
+            background-color: yellow;
+        }
+
+        .container2 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+        .box4 {
+            width: 400px;
+            background-color: red;
+        }
+        .box5 {
+            width: 400px;
+            background-color: orange;
+        }
+        .box6 {
+            width: 400px;
+            background-color: yellow;
+        }
+
+        .container3 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            display: flex;
+            flex-flow: row-reverse wrap-reverse;
+        }
+        .box7 {
+            width: 400px;
+            background-color: red;
+        }
+        .box8 {
+            width: 400px;
+            background-color: orange;
+        }
+        .box9 {
+            width: 400px;
+            background-color: yellow;
+        }
+
+        .container4 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .box10 {
+            background-color: red;
+        }
+        .box11 {
+            background-color: orange;
+        }
+        .box12 {
+            background-color: yellow;
+        }
+
+        .container5 {
+            background-color: #c9c9c9;
+            padding: 1rem;
+            height: 200px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .box13 {
+            background-color: red;
+        }
+        .box14 {
+            background-color: orange;
+        }
+        .box15 {
+            background-color: yellow;
+        }
+
+        .container6 {
+            background-color: #c9c9c9;
+            height: 400px;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+        .box16 {
+            width: 400px;
+            background-color: red;
+        }
+        .box17 {
+            width: 400px;
+            background-color: orange;
+        }
+        .box18 {
+            width: 400px;
+            background-color: yellow;
+        }
+
+        .container7 {
+            background-color: #c9c9c9;
+            height: 400px;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap
+        }
+        .box19 {
+            align-self: flex-start;
+            background-color: red;
+        }
+        .box20 {
+            align-self: center;
+            background-color: orange;
+        }
+        .box21 {
+            align-self: flex-end;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1차원 방식으로 효과적으로 레이아웃을 설계할 수 있는 스타일 속성이다.  -->
+    <!-- 1차원 방식은 가로와 세로를 의미한다. -->
+
+
+
+    <!-- 부모 속성에 display: flex라는 스타일 속성을 적용하여 사용한다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- flex-direction 속성 -->
+
+    <!-- flex 아이템의 진행 방향을 설정한다. -->
+    <!-- 속성값으론 row, row-reverse, column, column-reverse 등이 있다. -->
+
+    <div class="container1">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+
+    <!-- row: flex 의 기본값이다. 진행방향은 상단 왼쪽에서 상단 오른쪽으로 진행한다. -->
+    <!-- row-reverse: row의 반대값으로 진행방향은 상단 오른쪽에서 상단 왼쪽으로 진행한다. -->
+    <!-- column: 세로방향으로 표현되며, 진행방향은 상단 왼쪽 위에서 상단 왼쪽 아래로 진행한다. -->
+    <!-- column-reverse: column의 반대값으로 진행방향은 상단 왼쪽 아래에서 상단 왼쪽 위로 진행한다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- flex-wrap 속성 -->
+
+    <!-- flex container 하위에 있는 flex item들의 크기가 너무 커 container를 벗어날 때, item들을 처리할 떄 사용한다. -->
+    <!-- 속성값으론  wrap, nowrap, wrap-reverse 등이 있다. -->
+
+    <div class="container2">
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+    </div>
+
+    <!-- wrap: item이 container를 벗어나면 줄바꿈되면서 표현한다. -->
+    <!-- nowrap: item이 container를 벗어나도 무시한다. -->
+    <!-- wrap-reverse: wrap처럼 표현하되 역순으로 표현한다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- flex-flow 속성 -->
+
+    <!-- flex-direction과 flex-wrap 속성을 한번에 처리하는 속성이다. -->
+
+    <div class="container3">
+        <div class="box7">box7</div>
+        <div class="box8">box8</div>
+        <div class="box9">box9</div>
+    </div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- justify-content 속성 -->
+
+    <!-- flex 아이템을 주축(진행,가로)방향으로 정렬할 떄 사용한다. -->
+    <!-- 속성값으론 flex-start, flex-end, center, left, right 등이 있다. -->
+
+    <div class="container4">
+        <div class="box10">box10</div>
+        <div class="box11">box11</div>
+        <div class="box12">box12</div>
+    </div>
+
+    <!-- flex-start: 시작방향으로 정렬한다. -->
+    <!-- flex-end: 끝방향으로 정렬한다. -->
+    <!-- center: 중앙으로 정렬한다. -->
+    <!-- space-between: 아이템들 간격을 균등하게 벌려 정렬한다. -->
+    <!-- space-around: 아이템의 둘레가 균일하게 정렬한다. -->
+    <!-- space-evenly: 아이템 사이와 양끝의 간격을 균등하게 벌려 정렬한다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- align-itmes 속성 -->
+
+    <!-- flex 아이템을 교차축(세로)방향으로 정렬할 때 사용한다. -->
+
+    <div class="container5">
+        <div class="box13">box13</div>
+        <div class="box14">box14</div>
+        <div class="box15">box15</div>
+    </div>
+
+    <!-- flex-start: 시작방향으로 정렬한다. -->
+    <!-- flex-end: 끝방향으로 정렬한다. -->
+    <!-- center: 중앙으로 정렬한다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- align-content 속성 -->
+
+    <!-- flex-wrap 속성에 의해 강제적으로 item들이 줄바꿈 되었을 떄, 사용하여 정렬한다. -->
+
+    <div class="container6">
+        <div class="box16">box16</div>
+        <div class="box17">box17</div>
+        <div class="box18">box18</div>
+    </div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+    <!-- flex 아이템에 관련된 속성도 있다. -->
+
+
+    <!-- align-self 속성 -->
+
+    <div class="container7">
+        <div class="box19">box19</div>
+        <div class="box20">box20</div>
+        <div class="box21">box21</div>
+    </div>
+</body>
+</html>

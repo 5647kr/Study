@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6.07]애니메이션 속성으로 전환 효과 제어하기</title>
+    <style>
+        @keyframes bgchange {
+            0%{
+                background-color: orange;
+            }
+            25%{
+                background-color: yellow;
+            }
+            50% {
+                background-color: green;
+            }
+            75% {
+                background-color: blue;
+            }
+            100%{
+                background-color: purple;
+            }
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: none;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+        }
+
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+
+        .box6 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+        .box6:hover {
+            animation-play-state: paused;
+        }
+
+        .box7 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 5;
+            animation-direction: normal;
+        }
+
+        .box8 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 5;
+            animation-direction: reverse;
+        }
+
+        .box9 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 5;
+            animation-direction: alternate;
+        }
+
+        .box10 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 5;
+            animation-direction: alternate-reverse;
+        }
+    </style>
+</head>
+<body>
+    <!-- 전환효과보다 좀더 부드럽게 제어할 수 있는 속성이 바로 애니메이션 속성이다. -->
+
+    <!-- 키프레임이라는 규칙을 설정해줘야 하고, 식별할 수 있는 고유한 이름을 지정해 줘야 한다. -->
+    <!-- 0%부터 시작지점 100% 끝지점을 표시한다. from~ to로 설정하여도 가능하다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- animation-name 속성 -->
+
+    <!-- 요소에 적용할 키프레임명을 작성하여 사용한다. -->
+
+    <!-- 예제 -->
+
+    <div class="box1"></div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- animation-duration 속성 -->
+
+    <!-- 요소에 적용할 애니메이션의 지속시간을 지정할 때 사용한다.-->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- animation-delay 속성 -->
+
+    <!-- 요소에 적용할 애니메이션의 지연시간을 지정할 떄 사용한다. -->
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- animation-fill-mode 속성 -->
+
+    <!-- 애니메이션이 끝나도 원래 상태로 돌아가지 않고 종료 상태를 유지할 때 사용한다. -->
+    <!-- 속성값으론 none, forwards, backwards, both 등이 있다. -->
+    <!-- none: 실행전 애니메이션을 적용하지 않고 실행 후 원래 상태로 돌아간다. -->
+    <!-- forwards: 실행전 애니메이션을 적용하지 않고 실행 후 키프레임의 종료 상태로 대기한다. -->
+    <!-- backwards: 실행전 애니메이션을 적용해 대기하고 실행 후 원래 상태로 돌아간다. -->
+    <!-- both: 실행전 애니메이션을 적용해 대기하고 실행 후 키프레임의 종료 상태로 대기한다. -->
+
+    <!-- 예제 -->
+
+    <div class="box2">forwards</div>
+    <br>
+    <div class="box3">backwards</div>
+    <br>
+    <div class="box4">both</div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- animation-literator-count 속성 -->
+
+    <!-- 애니메이션의 반복 획수를 지정할 떄 사용한다. -->
+    <!-- 속성값으론 infinite, 숫자 등이 있다. -->
+    <!-- infiinite: 무한 -->
+
+    <!-- 예제  -->
+
+    <div class="box5">infinite</div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- animation-play-state 속성 -->
+
+    <!-- 애니메이션의 재생 상태를 지정할 때 사용한다. -->
+    <!-- 속성값으론 paused, running이 있다. -->
+
+    <!-- 예제 -->
+
+    <div class="box6">paused</div>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- animation-direction 속성 -->
+
+    <!-- 애니메이션의 진행 방향을 지정할 떄 사용한다. -->
+    <!-- 속성값으론 normal, reverse, alternate, alternate-reverse -->
+    <!--  normal: 순방향으로 재생한다.-->
+    <!-- reverse: 역방향으로 재생한다.-->
+    <!-- alternate: 홀수번째는 순방향, 짝수번째는 역방향으로 재생한다. -->
+    <!-- alternate-reverse: 홀수번째는 역방향, 짝수번째는 순방향으로 재생한다. -->
+
+    <!-- 예제 -->
+
+    <div class="box7">normal</div>
+    <br>
+    <div class="box8">reverse</div>
+    <br>
+    <div class="box9">alternate</div>
+    <br>
+    <div class="box10">alternate-reverse</div>
+</body>
+</html>
