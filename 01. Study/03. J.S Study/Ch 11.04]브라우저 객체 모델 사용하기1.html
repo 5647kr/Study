@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 11.04]브라우저 객체 모델 사용하기</title>
+</head>
+<body>
+<!-- 웹브라우저에서 별도로 제공하는 객체를 브라우저 객체라 한다. -->
+
+<button onclick="popup()">팝업</button>
+<script>
+    function popup(){
+        window.open('popup.html', '팝업', 'width=200, height=100');
+        // window.open('popup.html', '팝업', 'width=200, height=100, left=400, top=400, titlebar=no, resizable=yes');
+    }
+</script>
+<button onclick="window.close()">팝업 닫기</button>
+</body>
+</html>
+

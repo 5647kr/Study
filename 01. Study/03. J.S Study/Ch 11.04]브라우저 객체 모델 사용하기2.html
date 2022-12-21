@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 11.04]브라우저 객체 모델 사용하기2</title>
+    <style>
+        body{
+        width:5000px;
+        height: 5000px;
+        }
+        div{
+        position: fixed;
+        top:10px; 
+        left:10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="sTo()">scrollTo(100, 200)</button>
+        <button onclick="sBy()">scrollBy(100, 200)</button>
+    </div>
+    <script>
+        function sTo(){ 
+        window.scrollTo(100, 200);
+          // window.scrollTo({left:100, top:200});
+          // 여러번 눌러도 제자리
+        }
+        function sBy(){ 
+        window.scrollBy(100, 200);
+          // window.scrollBy({left:100, top:200});
+          // 여러번 누르면 계속 이동
+        }
+    </script>
+    <!--  -->
+</body>
+</html>
