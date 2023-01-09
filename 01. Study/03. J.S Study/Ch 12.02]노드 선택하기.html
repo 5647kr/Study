@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12.02]노드 선택하기</title>
+</head>
+<body>
+    <!-- 노드는 속성으로 선택하는 방법과 매서드로 선택하는 방법이 있다. -->
+
+    <!-- 속성으로 노드 선택하기 -->
+
+    <h1 id="h1" class="sample">h1 태그</h1>
+    <a href="#" id="a" class="sample">a 태그</a>
+
+    <!-- 웹브라우저 개발자 모드에 console창에서 확인할 수 있다. -->
+
+    <!-- document.firstchild: doctype html -->
+    <!-- document.childnodes(모든 자식노드를 반환한는데, 기준과 바로 밑으로 연결된 노드만 반환한다.): doctype html, html -->
+    <!-- document.childnodes[0]: doctype html -->
+    <!-- document.childnodes[1]: html lang ... etc-->
+    <!-- document.lastchild: html -->
+
+    <!-- 노드 탐색 속성은 체이닝(연속해서 사용할 수 있다)이 된다. -->
+
+    <!-- document.lastchild.childnodes: head, text, body -->
+    <!-- document.lastchild.childnodes[0]: head -->
+
+    <!-- 요소 노드 선택하기 -->
+
+    <!-- 태그를 기반으로 받는 요소를 의미한다. -->
+
+    <!-- document.children[0].children[0].children: meta, title -->
+
+
+    <!-- 메서드로 노드 선택하기 -->
+
+    <!-- 선택하는 방법으로는 id 속성값, class 속성값, 태그명 등이 있다. -->
+
+
+    <!-- id 속성값 -->
+
+    <!-- document.getelementbyid("a"); : <a href="#" id="a">a 태그</a> -->
+    
+    <!-- document.getelementbyid("a"); : <a href="#" id="a">a 태그</a> -->
+
+    <!-- 메서드 노드방식과 속성 노드방식을 혼합할 수 있다. -->
+
+    <!-- document.getelementbyid("a").childnodes : text(a 태그) -->
+
+
+    <!-- class 속성값 -->
+
+    <!-- document.getelementbyclassname("sample"); : h1 태그, a 태그 -->
+
+    <!-- document.getelementbyclassname("sample")[0]; : h1 태그 -->
+
+
+    <!-- 태그 -->
+
+    <!-- document.getelementbytagname("a"); : <a href="#" id="a">a 태그</a> -->
+
+
+    <!-- query 메서드 -->
+
+    <!-- queryselector,queryselectorall이 있다. -->
+
+    <!-- queryselector는 단일 노드를 선택할 때 사용한다. -->
+    <!-- queryselectorall은 복수 노드를 선택할 때 사용한다. -->
+
+    <!-- document.queryselector("h1") : <h1 id="h1" class="sample">h1 태그</h1> -->
+
+    <!-- document.queryselector("html") : html -->
+
+    <!-- document.queryselector("head") : head -->
+
+    <!-- document.queryselector("a.sample") : <a href="#" id="a">a 태그</a> -->
+
+    <!-- document.queryselectorall(".sample") : h1, a -->
+</body>
+</html>

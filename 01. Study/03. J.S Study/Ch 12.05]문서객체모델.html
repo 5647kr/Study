@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12.05]문서객체모델</title>
+</head>
+<body>
+    <!-- form태그와 관련된 조작은 방법이 다르다. -->
+
+    <form>
+        <input type="text">
+    </form>
+    <form>
+        <input type="text">
+    </form>
+    <form>
+        <input type="text">
+    </form>
+
+    <script>
+        const formels1= document.forms[1];
+        console.log(formels1)
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- form name -->
+
+    <!-- form요소에 name속성을 사용해서 선택하는 방법이다. -->
+
+    <form name="form1">
+        <input type="text" name="user_id">
+    </form>
+    <form name="form2">
+        <input type="text" name="user_name">
+    </form>
+    <form name="form3">
+        <input type="text" name="user_nick">
+    </form>
+
+    <script>
+        const formels2= document.form3;
+        console.log(formels2);
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- forms-element -->
+
+    <form name="form4">
+        <label for="user_name">이름</label>
+        <input type="text" id="user_name" name="user_name">
+        <label for="age">나이</label>
+        <input type="text" id="age" name="age" value="20">
+        <label for="pw">비밀번호</label>
+        <input type="password" id="password" name="password" value="01234">
+        <label for="gender">성별</label>
+        <select name="gender" id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+        <textarea name="textarea" id="" cols="30" rows="10">fdsafdasfasfd</textarea>
+        <button type="submit">전송</button>
+    </form>
+
+    <script>
+        const formels3= document.form4;
+        console.log(form4.elements.age.value) //elements.~~는 name값을 할당할 경우에 사용
+        console.log(form4.elements.password.value) //암호화 되어있는 문자열도 다 확인할 수 있다.
+        console.log(form4.elements.textarea.value)
+        document.form4.user_name.value= '변경'; // 대입연산자로 값을 변경할 수 있다.
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- checkbox -->
+
+    <!-- 체크 되어있는걸 어떻게 가져오는지를 알 수 있다. -->
+
+    <form>
+        <label><input type="checkbox" value="apple">apple</label>
+        <label><input type="checkbox" value="banana" checked>banana</label>
+        <label><input type="checkbox" value="orange">orange</label>
+        <label><input type="checkbox" value="melon" checked>melon</label>
+    </form>
+
+    <script>
+        const inputels1= document.querySelectorAll("input[type='checkbox']");
+        inputels1.forEach((el)=> {
+            if(el.checked){
+                console.log(el.value);
+            }
+        })
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- radio -->
+
+    <!-- radio 특성상 name값이 같을 경우 하나만 선택한다. -->
+
+    <form>
+        <label><input type="radio" name="fruits" value="apple">apple</label>
+        <label><input type="radio" name="fruits" value="banana">banana</label>
+        <label><input type="radio" name="fruits" value="orange" checked>orange</label>
+        <label><input type="radio" name="fruits" value="melon">melon</label>
+    </form>
+
+    <script>
+        const inputels2= document.querySelectorAll("input[type='radio']");
+        inputels2.forEach((el)=> {
+            if(el.checked){
+                console.log(el.value);
+            }
+        })
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- select -->
+
+    <form>
+        <select>
+            <option value="apple" selected>apple</option>
+            <option value="banana">banana</option>
+            <option value="orange">orange</option>
+            <option value="melon">melon</option>
+        </select>
+    </form>
+
+    <script>
+        const optels1= document.querySelectorAll("option");
+        console.log(optels1);
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- file upload -->
+
+    <!-- 업로드한 파일을 자바스크립트로 가져오는 방법 -->
+
+    <form name="form5">
+        <input type="file" name="upload">
+    </form>
+
+</body>
+</html>

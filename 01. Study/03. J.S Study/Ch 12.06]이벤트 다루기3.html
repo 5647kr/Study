@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12.06]이벤트 다루기3</title>
+</head>
+<body>
+    <!-- 이벤트 등록 메서드 -->
+
+    <button>클릭</button>
+    <input type="text">
+
+    <script>
+        const btnels1= document.querySelector("button");
+        btnels1.addEventListener("click", function() { // onclick에서 on은 뺀다.
+            console.log('click');
+        });
+        const inputels1= document.querySelector("input");
+        inputels1.addEventListener("keydown", ()=> {
+            console.log('keydown event');
+        });
+    </script>
+</body>
+</html>

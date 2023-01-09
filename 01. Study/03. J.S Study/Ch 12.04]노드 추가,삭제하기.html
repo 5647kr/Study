@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12.04]노드 추가,삭제하기</title>
+</head>
+<body>
+    <!-- 노드를 추가하는데는 노드 생성과 노드 연결이 있다. -->
+
+    <h1>h1 태그</h1>
+    <script>
+        const ae1= document.createElement('a');
+        const textNode= document.createTextNode('링크');
+        const hrefattr= document.createAttribute('href');
+
+        hrefattr.value= 'https://www.naver.com';
+        ae1.setAttributeNode(hrefattr);
+        ae1.appendChild(textNode);
+        document.body.appendChild(ae1);
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+    <!-- 노드 삭제하기 -->
+
+    <!-- 삭제하려는 노드의 부모노드에서 사용한다. -->
+
+    <h2>h2 태그</h2>
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+    <p>text4</p>
+    <p>text5</p>
+
+    <script>
+        const ae2= document.createElement('a');
+        const textNode2= document.createTextNode('링크');
+        const hrefattr2= document.createAttribute('href');
+
+        hrefattr2.value= 'https://www.naver.com';
+        ae2.setAttributeNode(hrefattr2);
+        ae2.appendChild(textNode2);
+        document.body.appendChild(ae2);
+
+        // h2 삭제를 예시
+
+        const he2= document.querySelector("h2");
+        he2.parentNode.removeChild(he2);
+
+        // 여러개 삭제하는 방법에는 2가지가 있다.
+
+        // 1. 모든 노드 찾기
+
+        // const pe1= document.querySelectorAll("p");
+        // pe1.forEach((el)=> {
+        //     el.parentNode.removeChild(el);
+        // })
+
+        // 2. childnodes 사용하기
+
+        const childNodes= document.body.childNodes;
+        childNodes.forEach((node)=> {
+            console.log(node.nodeName);
+            if(node.nodeName === 'p');
+            node.parentNode.removeChild(node);
+        })
+    </script>
+</body>
+</html>

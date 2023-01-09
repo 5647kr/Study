@@ -1,0 +1,53 @@
+.login_container {
+    width: 340px;
+    height: 390px;
+    border: 1px solid black;
+    display: grid;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 14px;
+    font-family: Roboto;
+}
+
+.google_btn {
+    margin-top: 28px;
+    height: 44px;
+    width: 228px;
+    font-weight: bold;
+}
+.google_btn>p {
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #504444;
+}
+
+.id input {
+    width: 228px;
+    height: 44px;
+    background-color: #eaeaea;
+    border: none;
+}
+
+.pw input {
+    width: 228px;
+    height: 44px;
+    background-color: #eaeaea;
+    border: none;
+}
+
+.login_btn {
+    width: 228px;
+    height: 44px;
+    background-color: #373f3c;
+    color: #ffffff;
+}
+
+.link a {
+    color: #2c3432;
+    text-decoration: none;
+    margin-bottom: 28px;
+}

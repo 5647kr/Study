@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12.06]이벤트 다루기1</title>
+</head>
+<body>
+    <!-- 대표적으로 마우스 이벤트, 키보드 이벤트, 포커스 이벤트, 폼 이벤트, 리소스 이벤트 등이 있다. -->
+
+    <!-- 자바스크립트에서 이벤트를 등록하는데는 인라인등록, 프로퍼티 리스너등록, 이벤트 등록 메서드를 이용한다. -->
+
+    <!-- ------------------------------------------------------------ --><br>
+
+    <!-- 인라인 등록 -->
+
+    <!-- 마우스 이벤트 -->
+
+    <button onclick="clickevent()">클릭1</button> <!-- 2. 등록한 함수를 태그에 연결한다 -->
+    <button ondblclick="clickevent()">클릭2</button>
+    <button onmouseover="clickevent()">클릭3</button>
+    <script>
+        function clickevent(){ // 1. 함수로 먼저 이벤트를 등록한다.
+            alert('click');
+        }
+    </script>
+
+    <!-- 키보드 이벤트 -->
+
+    <input type="text" onkeydown="keyevent()">
+    <script>
+        function keyevent(){
+            alert('key click!')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12.06]이벤트 다루기1</title>
+</head>
+<body>
+    <!-- 프로퍼티 리스너 방법 -->
+
+    <!-- 노드를 찾아서 속성을 등록하는 방법이다. -->
+
+    <button>클릭4</button>
+    <input type="text">
+    <script>
+        const btnels1= document.querySelector("button");
+        btnels1.onclick= function() {
+        console.log('click event!')
+        }
+
+        const inputels1= document.querySelector("input");
+        inputels1.onfocus= FocusEvent;
+
+        function FocusEvent() {
+            console.log('focus event')
+        }
+    </script>
+</body>
+</html>

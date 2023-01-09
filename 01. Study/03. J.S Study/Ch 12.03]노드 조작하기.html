@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12.03]노드 조작하기</title>
+    <style>
+        .style2 {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 콘텐츠 조작하기 -->
+    <!-- 웹브라우저에 콘솔창 열어서 확인 -->
+
+    <!-- textcontent, innertext, innerhtml이 있다. -->
+
+    <!-- textcontent -->
+    <!-- 태그는 가져오지 않고 텍스트만 가져온다. -->
+
+    <!-- innertext -->
+    <!-- 눈에 보이는것만 가져온다. -->
+
+    <!-- innerhtml -->
+    <!-- 태그를 포함한 모든 노드를 가져온다. -->
+    
+    <p id="title">hello, <span style="display: none;">javascript!</span></p>
+    <script>
+        const pe1= document.getElementById("title");
+        console.log(pe1.textContent);
+        console.log(pe1.innerText);
+        console.log(pe1.innerHTML);
+    </script>
+
+    <!-- 새로운 콘텐츠를 할당할 수 있다. -->
+
+    <p id="textContent">hello, </p>
+    <p id="innerText">hello, </p>
+    <p id="innerHTML"></p>
+
+    <script>
+        document.querySelector("#textContent").textContent= '<strong>hello, textcontent</strong>'; // 공백도 포함한다.
+        document.querySelector("#innerText").innerText= '<strong>hello, innerText</strong>'; // 공백을 포함하지 않는다.
+        document.querySelector("#innerHTML").innerTHML= '<strong>hello, innerhtml</strong>';
+    </script>
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- 스타일 조작하기 -->
+
+    <!-- css의 모든것이 다 가능하다. -->
+    <!-- 단 background-color처럼 -로 연결된 속성명을 사용할 떈 대문자를 사용한다. -->
+
+    <p id="style1">text</p>
+    <script>
+        const pe3= document.querySelector("#style1");
+        pe3.style.color="red";
+        pe3.style.backgroundColor="black";
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- 클래스 속성 조작하기 -->
+
+    <!-- 스타일 조작으로 조작해야할 속성이 많을 경우 비효율적인 상황에 사용한다.  -->
+    <!-- 체이닝이 되지 않는다. -->
+    <!-- 해드태그에 스타일 사용 -->
+
+
+    <p id="style2" class="style2">text</p>
+    <script>
+        const pe4= document.querySelector("#style2")
+        pe4.classList.add("style2") // 추가
+        pe4.classList.remove("style2") // 제거
+        pe4.classList.toggle("sytle2") // 추가 제거 반복
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- 데이터 속성 조작하기 -->
+
+    <button data-cnt="10">가방 구매</button>
+    <button data-cnt="0">신발 구매</button>
+
+    <script>
+        const btn= document.querySelectorAll("button");
+        btn.forEach((el)=> {
+            console.log(el.dataset.cnt);
+            el.dataset.cnt= 50; //재할당
+        })
+    </script>
+
+
+    <!-- ------------------------------------------------------------ --><br>
+
+
+    <!-- 메서드 조작하기 -->
+
+    <a href="https://www.google.com">구글</a>
+    <script>
+        const pe5= document.querySelector("a");
+        console.log(pe5.getAttribute("href")); // 가져오기
+        pe5.setAttribute("href", "https://www.naver.com"); // 재할당하기
+        pe5.setAttribute("target", "_blank"); // 추가하기
+        pe5.removeAttribute("href"); // 삭제하기
+    </script>
+</body>
+</html>
